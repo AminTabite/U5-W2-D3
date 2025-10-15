@@ -1,22 +1,33 @@
 package amintabite.U5_W2_D3.Entities;
 
+import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.util.List;
 import java.util.Random;
-
+@NoArgsConstructor
+@Entity
 @Setter
 @Getter
 @ToString
 public class Autore {
-
+@Id
+@GeneratedValue
     private long idautore;
+
     private String Nome;
     private String cognome;
     private  String email;
     private String datanascita;
     private String avatar;
+    @OneToMany(mappedBy = "autore")
+    private List<BlogPost> blogposts;
+
+
+
 
     public Autore( String nome, String cognome, String email, String datanascita) {
         Random rnd = new Random();
