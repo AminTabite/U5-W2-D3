@@ -1,5 +1,6 @@
 package amintabite.U5_W2_D3.Entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -27,7 +28,7 @@ public class Autore {
     private List<BlogPost> blogposts;
 
 
-
+@JsonIgnore
 
     public Autore( String nome, String cognome, String email, String datanascita) {
         Random rnd = new Random();
