@@ -19,7 +19,7 @@ public class Autore {
 @GeneratedValue
     private long idautore;
 
-    private String Nome;
+    private String nome;
     private String cognome;
     private  String email;
     private String datanascita;
@@ -31,10 +31,7 @@ public class Autore {
 @JsonIgnore
 
     public Autore( String nome, String cognome, String email, String datanascita) {
-        Random rnd = new Random();
-
-        this.idautore = rnd.nextInt(1,100);
-        Nome = nome;
+        this.nome = nome;
         this.cognome = cognome;
         this.email = email;
         this.datanascita = datanascita;

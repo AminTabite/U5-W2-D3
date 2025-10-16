@@ -29,8 +29,6 @@ public class BlogPost {
 
     public BlogPost(String categoria, String titolo, String cover, int tempolettura) {
 
-        Random rnd = new Random();
-        this.blogid = rnd.nextInt(1,1000);
         this.categoria = categoria;
         this.titolo = titolo;
         this.cover = "https://fastly.picsum.photos/id/591/200/300.jpg?hmac=GBnqheK8f8NgGoZ-JQIGl0uYMejcmT4gvw4PsBmUWPY";

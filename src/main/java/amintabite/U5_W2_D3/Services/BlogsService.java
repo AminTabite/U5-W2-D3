@@ -43,7 +43,7 @@ public class BlogsService {
 
     public BlogPost savesudb(NewBlogPayload payload){
 
-        Autore autore = autoreService.findById(Long.parseLong(payload.getAutoreid()));
+        Autore autore = autoreService.findById(Long.parseLong(String.valueOf(payload.getAutoreid())));
         if(autore== null)  {throw new NotFoundException("autore non trovato");}
 
         BlogPost newBlog = new BlogPost(
@@ -95,4 +95,4 @@ public class BlogsService {
 
 
 
-}
+

@@ -10,8 +10,7 @@ import org.springframework.stereotype.Repository;
 
 public interface AutoreRepository extends JpaRepository<Autore,Long> {
 
-    @Autowired
-    private AutoreService autores;
+
 
 
 
